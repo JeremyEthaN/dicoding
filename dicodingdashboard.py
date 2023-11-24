@@ -96,13 +96,13 @@ sbystate_df = create_sbystate_df(main_df)
 sbycity_df = create_sbycity_df(main_df)
 rfm_df = create_rfm_df(main_df)
 
-st.header('Proyek Analisis Data: E-Commerce Public Dataset Dashboard :sparkles:')
+st.header('Data Analysis Project: E-Commerce Public Dataset Dashboard :sparkles:')
 
 with st.expander("Business Questions"):
     st.write(
-        "1. Produk apa yang paling banyak terjual dan produk JENIS apa yang paling banyak dan sedikit terjual?\n"
-        "2. Bagaimana Demografi khususnya lokasi tempat tinggal Pelanggan dan Penjual yang Kita Miliki?\n\n"
-        "(Tambahan disertakan juga hasil visualisasi RFM)"
+        "1. What products sell the most and what TYPES of products sell the most and least?\n"
+        "2. What are the demographics, especially the location of where our customers and sellers live?\n\n"
+        "(Additionally included are the RFM visualization results)"
     )
 
 st.subheader("Best Performing Product")
