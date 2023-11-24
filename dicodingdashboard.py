@@ -63,7 +63,7 @@ def create_rfm_df(df):
     rfm_df.drop("max_order_timestamp", axis=1, inplace=True)
     return rfm_df
 
-all_df = pd.read_csv("https://raw.githubusercontent.com/JeremyEthaN/dicoding_dataset/main/streamlit/data_all.csv")
+all_df = pd.read_csv("https://raw.githubusercontent.com/JeremyEthaN/dicoding/main/Data%20Analysis/Streamlit/data_all.csv")
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
 all_df.sort_values(by="order_purchase_timestamp", inplace=True)
 all_df.reset_index(inplace=True)
