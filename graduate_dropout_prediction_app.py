@@ -37,7 +37,7 @@ with col1:
     data["Application_mode"] = scaler_Application_mode.transform(np.asarray(Application_mode).reshape(-1, 1))[0]
 
 with col2:
-    Application_order = int(st.number_input(label='Application_order', value=1))
+    Application_order = int(st.number_input(label='Application_order', value=1, min_value = 0, max_value = 9, help = 'Application order (between 0 - first choice; and 9 last choice)'))
     data["Application_order"] = scaler_Application_order.transform(np.asarray(Application_order).reshape(-1, 1))[0]
 
 with col3:
@@ -47,32 +47,32 @@ with col3:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    Previous_qualification_grade = float(st.number_input(label='Previous_qualification_grade', value=12.0))
+    Previous_qualification_grade = float(st.number_input(label='Previous_qualification_grade', value=100.0, min_value = 0, max_value = 200, help='Grade of previous qualification (between 0 and 200)'))
     data["Previous_qualification_grade"] = scaler_Previous_qualification_grade.transform(np.asarray(Previous_qualification_grade).reshape(-1, 1))[0]
 
 with col2:
-    Admission_grade = float(st.number_input(label='Admission_grade', value=13.0))
+    Admission_grade = float(st.number_input(label='Admission_grade', value=100.0, min_value = 0, max_value = 200, help='Admission grade (between 0 and 200)'))
     data["Admission_grade"] = scaler_Admission_grade.transform(np.asarray(Admission_grade).reshape(-1, 1))[0]
 
 with col3:
-    Tuition_fees_up_to_date = int(st.number_input(label='Tuition_fees_up_to_date', value=1))
+    Tuition_fees_up_to_date = int(st.number_input(label='Tuition_fees_up_to_date', value=1, min_value = 0, max_value = 1, help='1 – yes 0 – no'))
     data["Tuition_fees_up_to_date"] = scaler_Tuition_fees_up_to_date.transform(np.asarray(Tuition_fees_up_to_date).reshape(-1, 1))[0]
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    Gender = int(st.number_input(label='Gender', value=1))
+    Gender = int(st.number_input(label='Gender', value=1, min_value = 0, max_value = 1, help='1 – male 0 – female'))
     data["Gender"] = scaler_Gender.transform(np.asarray(Gender).reshape(-1, 1))[0]
 
 with col2:
-    Scholarship_holder = int(st.number_input(label='Scholarship_holder', value=0))
+    Scholarship_holder = int(st.number_input(label='Scholarship_holder', value=0, min_value = 0, max_value = 1, help='1 – yes 0 – no'))
     data["Scholarship_holder"] = scaler_Scholarship_holder.transform(np.asarray(Scholarship_holder).reshape(-1, 1))[0]
 
 with col3:
-    Age_at_enrollment = int(st.number_input(label='Age_at_enrollment', value=18))
+    Age_at_enrollment = int(st.number_input(label='Age_at_enrollment', value=18, max_value = 100))
     data["Age_at_enrollment"] = scaler_Age_at_enrollment.transform(np.asarray(Age_at_enrollment).reshape(-1, 1))[0]
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     Curricular_units_1st_sem_enrolled = int(st.number_input(label='Curricular_units_1st_sem_enrolled', value=5))
@@ -83,21 +83,21 @@ with col2:
     data["Curricular_units_1st_sem_approved"] = scaler_Curricular_units_1st_sem_approved.transform(np.asarray(Curricular_units_1st_sem_approved).reshape(-1, 1))[0]
 
 with col3:
-    Curricular_units_1st_sem_grade = float(st.number_input(label='Curricular_units_1st_sem_grade', value=14.0))
+    Curricular_units_1st_sem_grade = float(st.number_input(label='Curricular_units_1st_sem_grade', value=14.0, min_value = 0, max_value = 20))
     data["Curricular_units_1st_sem_grade"] = scaler_Curricular_units_1st_sem_grade.transform(np.asarray(Curricular_units_1st_sem_grade).reshape(-1, 1))[0]
 
-with col4:
-    Curricular_units_2nd_sem_enrolled = int(st.number_input(label='Curricular_units_2nd_sem_enrolled', value=5))
-    data["Curricular_units_2nd_sem_enrolled"] = scaler_Curricular_units_2nd_sem_enrolled.transform(np.asarray(Curricular_units_2nd_sem_enrolled).reshape(-1, 1))[0]
-
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col1:
+    Curricular_units_2nd_sem_enrolled = int(st.number_input(label='Curricular_units_2nd_sem_enrolled', value=5))
+    data["Curricular_units_2nd_sem_enrolled"] = scaler_Curricular_units_2nd_sem_enrolled.transform(np.asarray(Curricular_units_2nd_sem_enrolled).reshape(-1, 1))[0]
+    
+with col2:
     Curricular_units_2nd_sem_approved = int(st.number_input(label='Curricular_units_2nd_sem_approved', value=5))
     data["Curricular_units_2nd_sem_approved"] = scaler_Curricular_units_2nd_sem_approved.transform(np.asarray(Curricular_units_2nd_sem_approved).reshape(-1, 1))[0]
 
-with col2:
-    Curricular_units_2nd_sem_grade = float(st.number_input(label='Curricular_units_2nd_sem_grade', value=14.0))
+with col3:
+    Curricular_units_2nd_sem_grade = float(st.number_input(label='Curricular_units_2nd_sem_grade', value=14.0, min_value = 0, max_value = 20))
     data["Curricular_units_2nd_sem_grade"] = scaler_Curricular_units_2nd_sem_grade.transform(np.asarray(Curricular_units_2nd_sem_grade).reshape(-1, 1))[0]
 
 with st.expander("View the Raw Data"):
