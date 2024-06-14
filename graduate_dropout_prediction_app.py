@@ -24,7 +24,7 @@ from prediction import prediction
 
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.image("https://github.com/JeremyEthaN/dicoding/blob/18470acecaa9e32633118ddb179af5c9c0fc00b6/Belajar%20Penerapan%20Data%20Science/Logo%20LFM%20bulet.png", width=130)
+    st.image("https://github.com/JeremyEthaN/dicoding/raw/main/Belajar%20Penerapan%20Data%20Science/itb.png", width=130)
 with col2:
     st.header('Graduate / Dropout Prediction App (Prototype)')
 
