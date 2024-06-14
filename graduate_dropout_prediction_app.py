@@ -47,11 +47,11 @@ with col3:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    Previous_qualification_grade = float(st.number_input(label='Previous_qualification_grade', value=100.0, min_value = 0, max_value = 200, help='Grade of previous qualification (between 0 and 200)'))
+    Previous_qualification_grade = float(st.number_input(label='Previous_qualification_grade', value=100.0, min_value = 0.0, max_value = 200.0, help='Grade of previous qualification (between 0 and 200)'))
     data["Previous_qualification_grade"] = scaler_Previous_qualification_grade.transform(np.asarray(Previous_qualification_grade).reshape(-1, 1))[0]
 
 with col2:
-    Admission_grade = float(st.number_input(label='Admission_grade', value=100.0, min_value = 0, max_value = 200, help='Admission grade (between 0 and 200)'))
+    Admission_grade = float(st.number_input(label='Admission_grade', value=100.0, min_value = 0.0, max_value = 200.0, help='Admission grade (between 0 and 200)'))
     data["Admission_grade"] = scaler_Admission_grade.transform(np.asarray(Admission_grade).reshape(-1, 1))[0]
 
 with col3:
@@ -83,7 +83,7 @@ with col2:
     data["Curricular_units_1st_sem_approved"] = scaler_Curricular_units_1st_sem_approved.transform(np.asarray(Curricular_units_1st_sem_approved).reshape(-1, 1))[0]
 
 with col3:
-    Curricular_units_1st_sem_grade = float(st.number_input(label='Curricular_units_1st_sem_grade', value=14.0, min_value = 0, max_value = 20))
+    Curricular_units_1st_sem_grade = float(st.number_input(label='Curricular_units_1st_sem_grade', value=14.0, min_value = 0.0, max_value = 20.0))
     data["Curricular_units_1st_sem_grade"] = scaler_Curricular_units_1st_sem_grade.transform(np.asarray(Curricular_units_1st_sem_grade).reshape(-1, 1))[0]
 
 col1, col2, col3 = st.columns(3)
@@ -97,7 +97,7 @@ with col2:
     data["Curricular_units_2nd_sem_approved"] = scaler_Curricular_units_2nd_sem_approved.transform(np.asarray(Curricular_units_2nd_sem_approved).reshape(-1, 1))[0]
 
 with col3:
-    Curricular_units_2nd_sem_grade = float(st.number_input(label='Curricular_units_2nd_sem_grade', value=14.0, min_value = 0, max_value = 20))
+    Curricular_units_2nd_sem_grade = float(st.number_input(label='Curricular_units_2nd_sem_grade', value=14.0, min_value = 0.0, max_value = 20.0))
     data["Curricular_units_2nd_sem_grade"] = scaler_Curricular_units_2nd_sem_grade.transform(np.asarray(Curricular_units_2nd_sem_grade).reshape(-1, 1))[0]
 
 with st.expander("View the Raw Data"):
