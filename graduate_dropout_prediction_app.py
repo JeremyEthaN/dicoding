@@ -1,7 +1,24 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from data_preprocessing import data_preprocessing
+from data_preprocessing import (
+    data_preprocessing,
+    scaler_Application_mode,
+    scaler_Application_order,
+    scaler_Course,
+    scaler_Previous_qualification_grade,
+    scaler_Admission_grade,
+    scaler_Tuition_fees_up_to_date,
+    scaler_Gender,
+    scaler_Scholarship_holder,
+    scaler_Age_at_enrollment,
+    scaler_Curricular_units_1st_sem_enrolled,
+    scaler_Curricular_units_1st_sem_approved,
+    scaler_Curricular_units_1st_sem_grade,
+    scaler_Curricular_units_2nd_sem_enrolled,
+    scaler_Curricular_units_2nd_sem_approved,
+    scaler_Curricular_units_2nd_sem_grade
+)
 from prediction import prediction
 
 col1, col2 = st.columns([1, 5])
